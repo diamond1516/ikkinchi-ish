@@ -6,6 +6,7 @@ class Player(models.Model):
     image = models.ImageField(upload_to='player/', verbose_name="Rasmi")
     created_at = models.DateField(auto_now=True)
     description = models.TextField(verbose_name='Izoh')
+    like = models.PositiveIntegerField(default=10, verbose_name='Like')
 
 
 class Club(models.Model):

@@ -6,6 +6,6 @@ def home(request):
     context = {
         'clubs': models.Club.objects.all(),
         'players': models.Player.objects.all(),
-        'footer': models.Footer.objects.all()
+        'footer': models.Footer.objects.all().first()
     }
     return render(request, 'index.html', context=context)

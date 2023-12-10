@@ -53,69 +53,21 @@
         <p>Eng mashhur o`yinchilar</p>
       </div>
       <div class="design-content">
+        {% for player in players %}
         <div class="design-item">
           <div class="design-img">
-            <img src="images/art-design-1.jpg" alt="">
-            <span><i class="far fa-heart"></i> 35</span>
+            <img src="{{ player.image.url }}" alt="Fudbolist">
+            <span><i class="far fa-heart"></i>{{ player.like }}</span>
             <span>Football.News</span>
           </div>
+          <br>
+          <h4>{{ player.full_name }}</h4>
           <div class="design-title">
-            <a href="#">Lionel Andres Messi Kuchchittini (talaffuzi: Lionel Andres Messi Kuchchittini; 1987-yilda 24-iyunda Argentinada tavallud topgan.</a>
+            <a href="#">{{ player.description }}</a>
           </div>
         </div>
-        <div class="design-item">
-          <div class="design-img">
-            <img src="images/art-design-2.jpg" alt="">
-            <span><i class="far fa-heart"></i> 40</span>
-            <span>Football.News</span>
-          </div>
-          <div class="design-title">
-            <a href="#">Cristiano Ronaldo dos Santos Aveiro (talaffuzi: Krishtianu Ronaldu dush Santus Aveyru) 1985-yilning 5-fevralida tug'ilgan, Al-Nassr FK futbol klubi va Portugaliya milliy futbol jamoasi uchun o?ynaydigan professional futbolchi.</a>
-          </div>
-        </div>
-        <div class="design-item">
-          <div class="design-img">
-            <img src="images/art-design-3.jpg" alt="">
-            <span><i class="far fa-heart"></i> 34</span>
-            <span>Football.News</span>
-          </div>
-          <div class="design-title">
-            <a href="#">Neymar Da Silva Santos Junior (portugalcha: Neymar da Silva Santos Junior; 1992-yil 5-fevralda tug'ilgan)  braziliyalik futbolchi.
-                Neymar uchta turli klubda 100 tadan ortiq gol urgan va bu natijaga erishgan to'rt o'yinchidan biriga aylandi</a>
-          </div>
-        </div>
-        <div class="design-item">
-          <div class="design-img">
-            <img src="images/art-design-4.jpg" alt="">
-            <span><i class="far fa-heart"></i> 39</span>
-            <span>Football.News</span>
-          </div>
-          <div class="design-title">
-            <a href="#">Ronaldu de Asis Moreira
-                Ronaldinyo nomi bilan mashhur (Ronaldinho) va Ronaldino Gaucho braziliyalik futbolchi, hujumkor yari himoyachi va hujumchi sifatida o'ynagan. U 1980-yil 21-martda Braziliyaning Portu-Alegri shahrida tug'ilgan. </a>
-          </div>
-        </div>
-        <div class="design-item">
-          <div class="design-img">
-            <img src="images/art-design-5.jpg" alt="">
-            <span><i class="far fa-heart"></i> 33</span>
-            <span>Football.News</span>
-          </div>
-          <div class="design-title">
-            <a href="#">Erling Braut Haaland (talaffuzi: Erling Braut Holand) (2000-yil 21-iyulda tug'ilgan) norvegiyalik professional futbolchi, Premiyer-liganing "Manchester City" klubi va Norvegiya terma jamoasida hujumchi sifatida o'ynaydi. </a>
-          </div>
-        </div>
-        <div class="design-item">
-          <div class="design-img">
-            <img src="images/art-design-6.jpg" alt="">
-            <span><i class="far fa-heart"></i> 33</span>
-            <span>Football.News</span>
-          </div>
-          <div class="design-title">
-            <a href="#">Kylian Mbappe Lottin (1998-yil 20-dekabrda tug'ilgan) fransuz professional futbolchisi, Liga 1 klubi Parij Sen-Jermen va Fransiya terma jamoasi forvardi sifatida to'p suradi.</a>
-          </div>
-        </div>
-      </div>
+        {% endfor %}
+    </div>
     </div>
   </section>
   <!-- End of design section -->
@@ -127,82 +79,20 @@
         <p>Eng mashhur futbol klublari</p>
       </div>
       <div class="blog-content">
+        {% for club in clubs %}
         <div class="blog-item">
           <div class="blog-img">
-            <img src="images/blog-p-1.jpg" alt="">
-            <span><i class="far fa-heart"></i></span>
+            <img src="{{ club.image.url }}" alt="Surat">
+            <span><i class="far fa-heart"></i>{{ club.like }}</span>
           </div>
           <div class="blog-text">
-            <span>27 Oktyabr 2023</span>
-            <h2>Barcelona</h2>
-            <p>Futbol Club Barcelona yoki shunchaki Barcelona Ispaniyaning Barselona shahrida tuzilgan professional futbol klubi. 
-               Ispaniya Primera Divizioni vakili 1899-yilda Joan Gamper boshchiligida shveysariyalik, britaniyalik, ispaniyalik va kataloniyalik futbolchilar tomonidan tashkil qilingan.</p>
-            <a href="">Ko'proq o'qish</a>
+            <span>{{ club.created_at }}</span>
+            <h2>{{ club.title }}</h2>
+            <p>{{ club.description }}</p>
+            <a href="#">Ko'proq o'qish</a>
           </div>
         </div>
-        <div class="blog-item">
-          <div class="blog-img">
-            <img src="images/blog-p-2.jpg" alt="">
-            <span><i class="far fa-heart"></i></span>
-          </div>
-          <div class="blog-text">
-            <span>27 Oktyabr 2023</span>
-            <h2>Real Madrid</h2>
-            <p>Real Madrid Club de Futbol (Real Madrid qirollik klubi; ko'pincha ishlatiladigan nomi Real Madrid) Ispaniyaning professional futbol klubidir.
-                Real Madrid Ispaniya oliy divizionini hali biror marta ham tark etmagan uch klubdan Barselona, Atletik Bilbao biridir.</p>
-            <a href="">Ko'proq o'qish</a>
-          </div>
-        </div>
-        <div class="blog-item">
-          <div class="blog-img">
-            <img src="images/blog-p-3.jpg" alt="">
-            <span><i class="far fa-heart"></i></span>
-          </div>
-          <div class="blog-text">
-            <span>27 Oktyabr 2023</span>
-            <h2>Manchester Siti</h2>
-            <p>Angliyaning "Manchester Siti" klubiga egalik qiluvchi City Football Group konserni Xitoyning China Media Capital xolding kompaniyasi bilan hamkorlikni yo'lga qo'ygani haqida xabar berdi.</p>
-            <a href="">Ko'proq o'qish</a>
-          </div>
-        </div>
-        <div class="blog-item">
-          <div class="blog-img">
-            <img src="images/blog-p-4.jpg" alt="">
-            <span><i class="far fa-heart"></i></span>
-          </div>
-          <div class="blog-text">
-            <span>27 Oktyabr 2023</span>
-            <h2>Borussiya Dortmund</h2>
-            <p>"Borussiya Dortmund" Germaniyadagi a'zolik bo'yicha ikkinchi yirik sport klubiga aylandi.
-                U Germaniya futbol ligasi tizimining yuqori toifasi bo'lgan Bundesligada o'ynaydigan professional erkaklar futbol jamoasi.</p>
-            <a href="">Ko'proq o'qish</a>
-          </div>
-        </div>
-        <div class="blog-item">
-          <div class="blog-img">
-            <img src="images/blog-p-5.jpg" alt="">
-            <span><i class="far fa-heart"></i></span>
-          </div>
-          <div class="blog-text">
-            <span>27 Oktyabr 2023 </span>
-            <h2>Liverpul</h2>
-            <p> "Liverpul" Angliya jamolari ichida Chempionlar Ligasi bahslarida eng ko`p g`alaba qozongan klub hisoblanadi. Jamoa 5 bor Yevropada tengsiz topilishgan. Angliya chempionatida eng ko`p 18 marta g`alaba qozonishgan.</p>
-            <a href="">Ko'proq o'qish</a>
-          </div>
-        </div>
-        <div class="blog-item">
-          <div class="blog-img">
-            <img src="images/blog-p-6.jpg" alt="">
-            <span><i class="far fa-heart"></i></span>
-          </div>
-          <div class="blog-text">
-            <span>27 Oktyabr, 2023</span>
-            <h2>Manchester Yunayted</h2>
-            <p>"Qizil iblislar" 1878 yilda "Nyuton Xit" nomi ostida bir guruh temiryo'lchi ishchilar tomonidan tashkil etilgan. 1902 yildan etiboran "Manchester Yunayted" nomi ostida faoliyat olib bormoqda. 
-               O'sha vaqtdagi jamoa bosh murabbiyi Ernest Mangnelldan birinchi navbatda jamoani yaxshi ijrochilar bilan to'ldirish talab etilgan.</p>
-            <a href="">Ko'proq o'qish</a>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </section>
@@ -213,16 +103,14 @@
     <div class="container">
       <div class="about-content">
         <div>
-          <img src="images/about-bg.jpg" alt="">
+          <img src="{{ footer.image.url }}" alt="surat">
         </div>
         <div class="about-text">
           <div class="title">
-            <h2>Pele</h2>
+            <h2>{{ footer.full_name }}</h2>
             <p>Afsonaviy futbolchi</p>
           </div>
-          <p>Braziliyaning afsonaviy futbolchisi Pele 29 dekabr kuni kechki vaqt 82 yoshida vafot etdi. U San-Paolodagi xususiy shifoxonada saraton kasalligidan davolanayotgandi. U mazkur kasalxonaga bir oy oldin yo'g'on ichak saratoni tufayli yotqizilgan edi.</p>
-          <p>Pele Santos shahrida dunyodagi eng katta qabriston sifatida Ginnesning rekordlar kitobiga kiritilgan vertikal qabristonga dafn etiladi.
-             Ma'lumot o'rnida, Pele Braziliya terma jamoasi bilan uch karra jahon chempioni bo'lgan. Xalqaro futbol federatsiyasi Peleni XX asrning eng yaxshi futbolchisi deb tan oldi. U o'yinchi sifatida uch marta jahon chempioni bo'lgan dunyodagi yagona futbolchi. Bu 1958, 1962 va 1970 yillarda sodir bo'lgan. U Braziliya terma jamoasi safida 92 ta o'yinda maydonga tushib, 77 ta gol urgan.</p>
+          <p>{{ footer.description }}</p>
         </div>
       </div>
     </div>
