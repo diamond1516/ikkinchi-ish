@@ -17,4 +17,6 @@ class MovieAdmin(admin.ModelAdmin):
 
 @admin.register(models.Footer)
 class MovieAdmin(admin.ModelAdmin):
-    list_display = ('id',)
+    list_display = ('id', 'full_name')
+
+    def has_add_permission(self, request): return not models.Footer.objects.exists()
